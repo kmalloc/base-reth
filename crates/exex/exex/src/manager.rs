@@ -491,7 +491,7 @@ where
                 match source {
                     ExExNotificationSource::BlockchainTree => {
                         debug!(target: "exex::manager", ?committed_tip, ?reverted_tip, "Committing notification to WAL");
-                        this.wal.commit(&notification)?;
+                        // this.wal.commit(&notification)?;
                     }
                     ExExNotificationSource::Pipeline => {
                         debug!(target: "exex::manager", ?committed_tip, ?reverted_tip, "Notification was sent from pipeline, skipping WAL commit");
